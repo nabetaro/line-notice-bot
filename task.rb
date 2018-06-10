@@ -8,6 +8,7 @@ message = <<EOS
 https://chouseisan.com/s?h=0aa8981788814f73b92f7cd784624961
 EOS
 
-#return unless Time.now.monday?
+now = Time.now
+return unless now.monday?
 client = LineClient.new
 client.push(message)
